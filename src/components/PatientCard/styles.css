@@ -1,0 +1,70 @@
+/* Patient Card */
+.c-patient-card{
+    display: flex;
+    background-color: #fff;
+border: 3px solid #1481BA;
+padding: 20px;
+min-height: 200px;
+border-radius: 20px;
+box-shadow: 2px 2px 15px 10px rgba(0,0,0,.2);
+transition: transform 0.2s ease-in-out;
+width: 100%;
+}
+.c-patient-card:hover{
+    transform: scale(1.04);
+    transition: transform 0.2s ease-out;
+}
+.c-patient-card__id-section{
+width: 25%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+align-items: center;
+}
+.c-patient-card__info-section{
+width: 75%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+}
+.c-patient-card__info{
+    text-align: end;
+    font-size: 12px;
+font-weight: 500;
+}
+.c-patient-card__url{
+    text-decoration: none;
+    color:#11B5E4;
+    font-weight: 500;
+
+}
+.c-patient-card__name{
+    font-weight: 400;
+}
+.c-patient-card__img{
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.c-patient-card__arrow-icon{
+    width: 20px;
+    height: 20px;
+}
+.c-patient-card__btn{
+    border: 3px solid #11B5E4;
+    background-color: #fff;
+}
+.c-patient-card__edit-btn{
+    border: 3px solid #11B5E4;
+    background-color: #11B5E4;
+    color: #fff;
+}
+.c-patient-card__btn-container{
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+/* END Patient Card */
