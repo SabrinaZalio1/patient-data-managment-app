@@ -17,7 +17,9 @@ function App() {
       <div className="app-container">
         <h1 className="app-title">Patient Data Management</h1>
         <PatientList showToast={showToast} />
-        {isToastVisible && <NotificationToast />}
+        {isToastVisible && (
+          <NotificationToast text="Changes saved successfully!" />
+        )}
       </div>
     </>
   );

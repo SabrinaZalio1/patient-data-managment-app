@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import defaultImage from "./../../assets/patient.png";
-
-interface ImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-}
+import { ImageProps } from "../../interfaces/patient.interface";
 
 const PatientImage: React.FC<ImageProps> = ({ src, alt, className }) => {
   const [imageSrc, setImageSrc] = useState(src);

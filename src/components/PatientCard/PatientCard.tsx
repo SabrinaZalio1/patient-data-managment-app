@@ -61,7 +61,7 @@ const PatientCard: React.FC<IProps> = ({ patient, showToast }) => {
           <a
             href={editableData.website}
             target="_blank"
-            className="c-patient-card__url underline-animation"
+            className="c-patient-card__url underline-animation font-sm "
           >
             Visit Website
           </a>
@@ -71,8 +71,10 @@ const PatientCard: React.FC<IProps> = ({ patient, showToast }) => {
       <div className="c-patient-card__info-section">
         <p className="c-patient-card__info">{formattedDate}</p>
         <h2 className="c-patient-card__name">{editableData.name}</h2>
-        <p>Birthday: {editableData.birthday || " "}</p>
-        <p>Health insurance: {editableData.healthInsurance || " "}</p>
+        <p className="font-sm ">Birthday: {editableData.birthday || " "}</p>
+        <p className="font-sm ">
+          Health insurance: {editableData.healthInsurance || " "}
+        </p>
 
         <div className="c-patient-card__btn-container">
           <button className="btn c-patient-card__btn" onClick={handleToggle}>
@@ -91,7 +93,7 @@ const PatientCard: React.FC<IProps> = ({ patient, showToast }) => {
           </button>
         </div>
 
-        <p className="c-patient-card__description">
+        <p className="c-patient-card__description font-sm ">
           {isExpanded ? editableData.description : truncatedDescription}
         </p>
       </div>

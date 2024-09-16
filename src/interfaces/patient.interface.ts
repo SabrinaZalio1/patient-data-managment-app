@@ -32,4 +32,11 @@ export interface IPatientList {
 
 export interface INotificationToastProps {
   className?: string;
+  text: string;
+}
+
+export interface ImageProps {
+  src: string;
+  alt: string;
+  className?: string;
 }

@@ -1,4 +1,3 @@
-// src/components/Modal/Modal.tsx
 import React from "react";
 import "./styles.css";
 import { IModalFormProps } from "../../interfaces/patient.interface";
@@ -12,6 +11,34 @@ const ModalForm: React.FC<IModalFormProps> = ({
 }) => {
   if (!isVisible) return null;
 
+  const formFields = [
+    { label: "Name", name: "name", type: "text", value: editableData.name },
+    {
+      label: "Website",
+      name: "website",
+      type: "text",
+      value: editableData.website,
+    },
+    {
+      label: "Birthday",
+      name: "birthday",
+      type: "date",
+      value: editableData.birthday,
+    },
+    {
+      label: "Health Insurance",
+      name: "healthInsurance",
+      type: "text",
+      value: editableData.healthInsurance,
+    },
+    {
+      label: "Description",
+      name: "description",
+      type: "textarea",
+      value: editableData.description,
+    },
+  ];
+
   return (
     <div className="modal-backdrop">
       <div className="modal-content">
@@ -20,51 +47,26 @@ const ModalForm: React.FC<IModalFormProps> = ({
         </button>
         <h2 className="c-modal-form__title">Edit Patient</h2>
         <form className="c-modal-form__form">
-          <div>
-            <label>Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={editableData.name}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label>Website:</label>
-            <input
-              type="text"
-              name="website"
-              value={editableData.website}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label>Birthday:</label>
-            <input
-              type="date"
-              name="birthday"
-              value={editableData.birthday}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label>Health Insurance:</label>
-            <input
-              type="text"
-              name="healthInsurance"
-              value={editableData.healthInsurance}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label>Description:</label>
-            <textarea
-              name="description"
-              value={editableData.description}
-              onChange={handleInputChange}
-              className="c-modal-form__decription"
-            />
-          </div>
+          {formFields.map((field, index) => (
+            <div key={index}>
+              <label>{field.label}:</label>
+              {field.type === "textarea" ? (
+                <textarea
+                  name={field.name}
+                  value={field.value}
+                  onChange={handleInputChange}
+                  className="c-modal-form__description"
+                />
+              ) : (
+                <input
+                  type={field.type}
+                  name={field.name}
+                  value={field.value}
+                  onChange={handleInputChange}
+                />
+              )}
+            </div>
+          ))}
           <button
             type="button"
             onClick={handleSaveClick}
