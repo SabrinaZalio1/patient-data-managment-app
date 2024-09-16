@@ -29,3 +29,9 @@ If there is no patients information available, the app will notify the user:
 <br/><br/>
 
 <img src="https://github.com/user-attachments/assets/3d765f7f-6334-4828-af50-aa7f78421641" alt="Screenshot" width="350" height="600"/>
+
+## How to run the application locally:
+ 
+ 1. git clone
+ 2. npm install
+ 3. npm run dev
