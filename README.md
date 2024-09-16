@@ -1,4 +1,7 @@
 # Patient Data Managment App
 
-Created with vite, a proyect with React.JS and Typescript
+## The objective is to manage patients data, being able to see and edit it.
+
+This is a project created with vite, React.JS, axios and Typescript.
+
 
