@@ -61,7 +61,7 @@ const PatientCard: React.FC<IProps> = ({ patient, showToast }) => {
           <a
             href={editableData.website}
             target="_blank"
-            className="c-patient-card__url"
+            className="c-patient-card__url underline-animation"
           >
             Visit Website
           </a>

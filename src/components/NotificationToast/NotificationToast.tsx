@@ -1,9 +1,14 @@
 // src/components/Modal/Modal.tsx
+import { INotificationToastProps } from "../../interfaces/patient.interface";
 import "./styles.css";
 
-const NotificationToast = () => {
+const NotificationToast: React.FC<INotificationToastProps> = ({
+  className,
+}) => {
   return (
-    <div className="c-notification-toast">Changes saved successfully!</div>
+    <div className={`c-notification-toast ${className}`}>
+      Changes saved successfully!
+    </div>
   );
 };
 

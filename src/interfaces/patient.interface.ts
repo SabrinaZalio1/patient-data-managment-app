@@ -29,3 +29,7 @@ export interface IProps {
 export interface IPatientList {
   showToast: () => void;
 }
+
+export interface INotificationToastProps {
+  className?: string;
+}
