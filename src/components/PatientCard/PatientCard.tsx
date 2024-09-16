@@ -45,9 +45,9 @@ const PatientCard: React.FC<IProps> = ({ patient, showToast }) => {
   };
 
   const truncatedDescription =
-    description.length > 200
-      ? `${description.substring(0, 200)}...`
-      : description;
+    editableData.description.length > 200
+      ? `${editableData.description.substring(0, 200)}...`
+      : editableData.description;
 
   return (
     <div className="c-patient-card">
