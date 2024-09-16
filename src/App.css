@@ -1,61 +1,57 @@
 /* General styles */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    scroll-behavior: smooth;
-    font-family: "Roboto", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
-.app-container{
-    background-color: #11B5E4;
+.app-container {
+  background-color: #11b5e4;
 }
-.app-title{
-    font-size: 36px;
-    text-align: center;
-    padding: 50px;
+.app-title {
+  font-size: 36px;
+  text-align: center;
+  padding: 50px;
 }
-.btn{
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 16px;
-    padding: 8px 12px;
-    cursor: pointer;
-    width: 138px; 
+.btn {
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 138px;
 }
 .loader {
-    width: 25px;
-    height: 25px;
-    border: 3px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 25px;
+  height: 25px;
+  border: 3px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  left: 3px;
+  top: 14px;
+  border: 8px solid transparent;
+  border-right-color: #fff;
+  transform: rotate(-40deg);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
   }
-  .loader::after {
-    content: '';  
-    position: absolute;
-    box-sizing: border-box;
-    left: 3px;
-    top: 14px;
-    border: 8px solid transparent;
-    border-right-color: #FFF;
-    transform: rotate(-40deg);
+  100% {
+    transform: rotate(360deg);
   }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
-
-
-
-
+}

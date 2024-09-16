@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './styles.css';
-import defaultImage from './../../assets/patient.png'
+import React, { useState } from "react";
+import "./styles.css";
+import defaultImage from "./../../assets/patient.png";
 
 interface ImageProps {
   src: string;
   alt: string;
-  className?:string;
+  className?: string;
 }
 
 const PatientImage: React.FC<ImageProps> = ({ src, alt, className }) => {
@@ -16,12 +16,14 @@ const PatientImage: React.FC<ImageProps> = ({ src, alt, className }) => {
   };
 
   return (
-    <img
-    className={className}
-      src={imageSrc}
-      alt={alt}
-      onError={handleImageError}
-    />
+    <div className="c-patient-img">
+      <img
+        className={className}
+        src={imageSrc}
+        alt={alt}
+        onError={handleImageError}
+      />
+    </div>
   );
 };
 
